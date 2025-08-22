@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Teacher_scheduler">
+
+        <!-- Auth Activities -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +22,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Teacher Activities -->
+        <activity
+            android:name=".teacher.activities.TeacherStatisticsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.activities.TeacherScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.activities.TeacherDashboardActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
