@@ -8,11 +8,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.teacher_scheduler.R;
+import com.example.teacher_scheduler.teacher.fragments.TeacherCreateScheduleFragment;
+import com.example.teacher_scheduler.teacher.fragments.TeacherMakeupScheduleFragment;
 import com.example.teacher_scheduler.teacher.fragments.TeacherScheduleListFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -45,13 +48,16 @@ public class TeacherScheduleActivity extends AppCompatActivity {
                 (tab, position) -> {
                     switch (position) {
                         case 0:
-                            tab.setText("Danh sách");
+                            tab.setText("Tạo lịch");
+                            tab.setIcon(R.drawable.ic_create);
                             break;
                         case 1:
-                            tab.setText("Tuần");
+                            tab.setText("Danh sách");
+                            tab.setIcon(R.drawable.ic_list);
                             break;
                         case 2:
-                            tab.setText("Tháng");
+                            tab.setText("Dạy bù");
+                            tab.setIcon(R.drawable.ic_makeup);
                             break;
                     }
                 }
@@ -69,11 +75,11 @@ public class TeacherScheduleActivity extends AppCompatActivity {
         public Fragment createFragment(int position) {
             switch (position) {
                 case 0:
-                    return new TeacherScheduleListFragment();
+                    return new TeacherCreateScheduleFragment();
                 case 1:
-                    return new TeacherWeekScheduleFragment();
+                    return new TeacherScheduleListFragment();
                 case 2:
-                    return new TeacherMonthScheduleFragment();
+                    return new TeacherMakeupScheduleFragment();
                 default:
                     return null;
             }
@@ -83,5 +89,11 @@ public class TeacherScheduleActivity extends AppCompatActivity {
         public int getItemCount() {
             return 3;
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }
