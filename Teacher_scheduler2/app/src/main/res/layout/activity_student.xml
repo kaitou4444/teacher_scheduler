@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".student.StudentActivity">
 
-    <!-- Thanh tiêu đề -->
-    <TextView
-        android:id="@+id/tvTitle"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TLU Schedule"
-        android:gravity="center"
-        android:background="#3F51B5"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:padding="12dp"
-        android:textStyle="bold"/>
+        android:layout_height="56dp"
+        android:background="@color/primaryBlue"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
 
-    <!-- TabLayout -->
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayoutStudent"
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabIndicatorColor="@android:color/holo_green_light"
-        app:tabSelectedTextColor="@android:color/black"
-        app:tabTextColor="@android:color/darker_gray"
-        android:background="#3F51B5"/>
+        android:layout_height="48dp"
+        android:tabIndicatorHeight="4dp"
+        android:tabMode="fixed"
+        />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPagerStudent"
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
 </LinearLayout>
