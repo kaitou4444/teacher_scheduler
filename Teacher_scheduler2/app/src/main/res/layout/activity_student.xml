@@ -20,7 +20,7 @@
 
     <!-- TabLayout -->
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/tabLayoutStudent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabIndicatorColor="@android:color/holo_green_light"
@@ -28,9 +28,9 @@
         app:tabTextColor="@android:color/darker_gray"
         android:background="#3F51B5"/>
 
-    <!-- ViewPager2 -->
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
+        android:id="@+id/viewPagerStudent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 </LinearLayout>

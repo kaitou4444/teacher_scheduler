@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeacherScheduler">
 
+
+
         <!-- Auth Activities -->
         <activity
             android:name=".LoginActivity"
