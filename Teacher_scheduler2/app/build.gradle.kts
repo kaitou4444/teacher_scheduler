@@ -40,6 +40,11 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.android.volley:volley:1.2.1")
+    // material, recyclerview, viewpager2
+    implementation("com.google.android.material:material:1.8.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.0")
+    implementation("androidx.viewpager2:viewpager2:1.1.0-beta01")
+// hoặc 1.0.0 nếu muốn ổn định
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
